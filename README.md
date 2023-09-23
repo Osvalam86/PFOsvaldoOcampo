@@ -102,7 +102,7 @@ Una vez validado lo anterior, ahora si podemos pasar a lo bueno 😁
 Debes clonar el repositorio en tu equipo, solo debes capturar lo siguiente dentro de una carpeta donde desees guardar el proyecto.
 
 ```
-git clone
+git clone https://github.com/Osvalam86/PFOsvaldoOcampo.git
 ```
 
 ## Paso 2: Instalar dependencias 🧩
