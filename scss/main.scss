@@ -1,0 +1,19 @@
+// ITCSS
+
+// 01. Settings......Global variables, config switches.
+// 02. Tools.........Default mixins and functions.
+// 03. Generic.......Ground-zero styles (resets, box-sizing).
+// 04. Elements......Unclassed HTML elements (type selectors).
+// 05. Keyframes.......Animations css.
+// 06. Objects.......Cosmetic-free design patterns (page structure classes, layouts, media objetcs).
+// 07. Components....Designed components, chunks of UI.
+// 08. Trumps........Overrides (importants) and utilities
+
+@import "01-settings/settings.scss";
+@import "02-tools/tools.scss";
+@import "03-generic/generic.scss";
+@import "04-elements/elements.scss";
+@import "05-keyframes/keyframes.scss";
+@import "06-objects/objects.scss";
+@import "07-components/components.scss";
+@import "08-trumps/trumps.scss";

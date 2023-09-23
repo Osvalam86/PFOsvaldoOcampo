@@ -1,6 +1,6 @@
 # 🕷️ SPIDERVERSO 🕷️
 
-## 🕸️ Hablemos un poco sobre el proyectO🕸️
+## 🕸️ Hablemos un poco sobre el proyecto🕸️
 
 El sitio web SPIDERVERSO es un proyecto inspirado en mi superheroe de Marvel favorito y es una idea que surge por el BOOM 🤯 de la llegada del Spiderverse a los cines, sin duda esto nos ha cautivado a todos los que conocemos de spiderman ¿y porque no?, a las nuevas generaciónes y personas que no conocen mucho sobre el tema.
 

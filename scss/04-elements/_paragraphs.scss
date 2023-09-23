@@ -1,0 +1,10 @@
+p {
+	@include make-font-style (
+		$font-family: $font-body-family,
+		$font-size: $font-body-size,
+		$font-weight: $font-body-weight,
+		$line-height: $body-line-height,
+		$color: $body-color,
+		$letter-spacing: $body-letter-spacing
+	)
+}

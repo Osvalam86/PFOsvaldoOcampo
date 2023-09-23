@@ -1,0 +1,151 @@
+// Extend Class
+.e-card-link {
+  display: block;
+  color: map-get($map: $colors, $key: "color-white");
+  text-decoration: none;
+  font-size: 1.5rem;
+  &::before {
+    cursor: pointer;
+    content: "";
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: z(default);
+    position: absolute;
+  }
+}
+.e-card-title {
+  border-radius: $border-xs $border-xs 0 0;
+  display: block;
+  background-color: map-get($map: $colors, $key: "color-dark");
+  padding: rem(16px);
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+.e-card-img {
+  display: block;
+  filter: grayscale(95%);
+  object-fit: cover;
+  object-position: 50% 12%;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Card Component
+.c-card {
+  border: rem(1.5px) solid map-get($map: $colors, $key: "color-white");
+  overflow: hidden;
+  position: relative;
+  border-radius: $border-xs;
+  &:hover,
+  &.is-active {
+    .c-card__img {
+      filter: grayscale(0%);
+      transform: scale(1.08);
+    }
+    .c-card__title {
+      background-color: map-get($map: $colors, $key: "color-secondary");
+    }
+  }
+  &__title {
+    @extend .e-card-title;
+  }
+  &__link {
+    @extend .e-card-link;
+    &:focus-visible,
+    &:focus {
+      outline: none;
+      &::before {
+        outline: rem(2px) solid map-get($map: $colors, $key: "color-white");
+        outline-offset: rem(-4px);
+      }
+    }
+  }
+  .o-container-gallery & {
+    animation-duration: 1s;
+    animation-delay: 0.25s;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+    animation-name: animate-pop;
+  }
+  &__img {
+    @extend .e-card-img;
+    transition: filter 0.3s ease-out, transform 0.3s ease-out;
+  }
+  &-slider {
+    border: none;
+    transition: transform 0.3s ease;
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: $border-xs;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0) 95%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover,
+    &.is-active {
+      z-index: z(default);
+      cursor: pointer;
+      transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+      .c-card-slider__bg-img {
+        filter: grayscale(0%);
+      }
+      &::before,
+      .c-card-slider__main-img {
+        opacity: 1;
+      }
+      .c-card-slider__main-img {
+        transform: translatey(5%);
+        @include respond-to(md) {
+          width: 120%;
+        }
+      }
+    }
+    &__bg-img {
+      box-shadow: map-get($map: $shadow, $key: "card");
+      border-radius: $border-xs;
+      @extend .e-card-img;
+      transition: all 0.3s ease-in-out;
+    }
+    &__main-img {
+      position: absolute;
+      height: auto;
+      width: 95%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translateY(38%);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    &__title {
+      @extend .e-card-title;
+    }
+    &__link {
+      @extend .e-card-link;
+      &:focus-visible,
+      &:focus {
+        outline: none;
+        &::before {
+          border-radius: $border-xs;
+          outline: rem(2px) solid map-get($map: $colors, $key: "color-white");
+          outline-offset: rem(2px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.o-font {
+  &-title {
+    @include title();
+    @include respond-to(xs) {
+      font-size: $font-size-xxxl;
+    }
+    @include respond-to(sm) {
+      font-size: $font-size-xxxxl;
+    }
+  }
+  &-subtitle {
+    @include subtitle();
+    @include respond-to(xs) {
+      font-size: $font-size-xxl;
+    }
+    @include respond-to(sm) {
+      font-size: $font-size-xxxl;
+    }
+  }
+  &-subtitle-sm {
+    @include subtitle-sm();
+    @include respond-to(sm) {
+      font-size: $font-size-xxl;
+    }
+  }
+  &-error {
+    font-size: rem(140px);
+    color: map-get($map: $colors, $key: "color-white");
+    font-weight: $font-bold;
+    animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    margin: 0;
+    @include respond-to(sm) {
+      font-size: rem(200px);
+    }
+    @include respond-to(md) {
+      font-size: rem(280px);
+    }
+    &--sm {
+      font-size: rem(60px);
+      animation: none;
+      margin-top: -3.5rem;
+      @include respond-to(sm) {
+        font-size: rem(80px);
+        margin-top: -5.313rem;
+      }
+      @include respond-to(md) {
+        font-size: rem(120px);
+      }
+    }
+  }
+  &-body {
+    font-size: rem(20px);
+    margin-bottom: rem(24px);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &-body-error {
+    font-size: $font-size-xl;
+  }
+  &-body-lg {
+    font-size: $font-size-l;
+    line-height: rem(32px);
+    #introContainer & {
+      &:last-of-type {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+    }
+    @include respond-to(lg) {
+      padding-right: rem(32px);
+    }
+  }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Osvaldo Ocampo" />
+    <meta name="copyright" content="Copyright Osvaldo Ocampo 2023" />
+    <meta
+      name="description"
+      content="Queremos conocer tu opinión. Déjanos tus comentarios y sugerencias."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Contáctanos | Ayudanos a mejorar y seguir creciendo</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/general/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="o-shadow-header fixed-top">
+      <nav class="navbar navbar-expand-lg c-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../assets/images/general/logotipo.png"
+              alt="Spiderverso logo"
+              class="navbar-brand__logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler c-navbar__toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <label class="c-hamburger">
+              <input
+                class="c-hamburger__checkbox"
+                type="checkbox"
+                id="checkbox"
+              />
+              <svg class="c-hamburger__vector" viewBox="0 0 32 32">
+                <path
+                  class="c-hamburger__line c-hamburger__line--top-bottom"
+                  d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+                ></path>
+                <path class="c-hamburger__line" d="M7 16 27 16"></path>
+              </svg>
+            </label>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav c-navbar__nav">
+              <li class="nav-item c-navbar__item">
+                <a
+                  class="nav-link c-navbar__link"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item c-navbar__item">
+                <a class="nav-link c-navbar__link" href="./characters.html"
+                  >Spiderverso</a
+                >
+              </li>
+              <li class="nav-item c-navbar__item">
+                <a class="nav-link c-navbar__link" href="./comics.html"
+                  >Comics</a
+                >
+              </li>
+              <li class="nav-item c-navbar__item">
+                <a class="nav-link c-navbar__link" href="./videos.html"
+                  >Videos</a
+                >
+              </li>
+              <li class="nav-item c-navbar__item">
+                <a
+                  class="nav-link c-navbar__link active"
+                  href="./contact-us.html"
+                  >Contáctanos</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="o-main">
+      <div class="o-container-bg o-container-bg--contact"></div>
+      <div class="container">
+        <div class="row">
+          <section class="col-12 col-lg-10">
+            <h1 class="o-font-title">Contáctanos</h1>
+            <p class="o-font-body-lg mt-4">
+              Para nosotros es importante tu opinión, es por eso que te pedimos
+              colabores con nosotros, para hacer crecer este proyecto, por ello
+              te pedimos que si tienes alguna sugerencia o bien conoces algún
+              <strong>spidey</strong> que nos haga falta incluir, por favor
+              háznoslo saber y nos daremos a la tarea de agregarlo a nuestra
+              base de datos para que viva dentro de nuestro Spiderverso
+            </p>
+          </section>
+        </div>
+        <form class="c-form row g-4">
+          <div class="col-md-12">
+            <div class="c-form__group">
+              <input
+                type="text"
+                placeholder=" "
+                class="c-form__input"
+                id="inputName"
+              />
+              <label for="inputName" class="c-form__label"
+                >Nombre completo</label
+              >
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="c-form__group">
+              <input
+                type="text"
+                placeholder=" "
+                class="c-form__input"
+                id="inputAddress"
+              />
+              <label for="inputAddress" class="c-form__label">Dirección</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="c-form__group">
+              <input
+                type="tel"
+                placeholder=" "
+                class="c-form__input"
+                id="inputPhone"
+              />
+              <label for="inputPhone" class="c-form__label">Teléfono</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="c-form__group">
+              <input
+                type="email"
+                placeholder=" "
+                class="c-form__input"
+                id="inputEmail"
+              />
+              <label for="inputEmail" class="c-form__label"
+                >Correo electrónico</label
+              >
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="c-form__group">
+              <textarea
+                placeholder=" "
+                class="c-form__textarea"
+                rows="6"
+                id="message"
+              ></textarea>
+              <label for="message" class="c-form__label">Mensaje</label>
+            </div>
+          </div>
+          <div class="col-12 mt-5">
+            <div class="c-form__buttons">
+              <button type="submit" class="btn c-btn-primary" id="buttonForm">
+                Enviar
+              </button>
+              <button type="reset" class="btn c-btn-secondary">
+                Reestablecer
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="c-footer">
+      <div class="container c-footer__container">
+        <p class="c-footer__copyright">
+          <strong>Spiderverso | Todos los derechos reservados ©</strong>
+        </p>
+        <div class="c-social-networks">
+          <a
+            href="../404-error.html"
+            class="c-social-networks__link c-social-networks__link--facebook"
+          >
+            <span class="sr-only">Ir al Facebook oficial del Spiderverso</span>
+            <span class="c-social-networks__tooltip">Facebook</span>
+            <img
+              src="../assets/images/social/facebook.svg"
+              alt="Logotipo de Facebook"
+              class="c-social-networks__logo"
+            />
+          </a>
+          <a
+            href="../404-error.html"
+            class="c-social-networks__link c-social-networks__link--twitter"
+          >
+            <span class="sr-only">Ir al Twitter oficial del Spiderverso</span>
+            <span class="c-social-networks__tooltip">Twitter</span>
+            <img
+              src="../assets/images/social/twitter.svg"
+              alt="Logotipo de Twitter"
+              class="c-social-networks__logo"
+            />
+          </a>
+          <a
+            href="../404-error.html"
+            class="c-social-networks__link c-social-networks__link--google"
+          >
+            <span class="sr-only"
+              >Ir a la cuenta de Google del Spiderverso</span
+            >
+            <span class="c-social-networks__tooltip">Google</span>
+            <img
+              src="../assets/images/social/google.svg"
+              alt="Logotipo de Google +"
+              class="c-social-networks__logo"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap script -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

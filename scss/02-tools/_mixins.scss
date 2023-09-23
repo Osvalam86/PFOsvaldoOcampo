@@ -1,0 +1,46 @@
+// Common Mixins
+
+// Mixin that hides content necessary for accessibility.
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only {
+  @include sr-only();
+}
+
+// ? Basis for text
+@mixin make-font-style(
+  $font-family: $font-primary,
+  $font-size: $font-size-m,
+  $font-weight: $font-regular,
+  $line-height: 1,
+  $color: #fff,
+  $letter-spacing: 0
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  letter-spacing: $letter-spacing;
+  margin: 0;
+}
+
+// ? breakpoint
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Please make sure it is defined in `$breakpoints` map.";
+  }
+}

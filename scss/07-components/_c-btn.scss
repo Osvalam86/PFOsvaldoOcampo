@@ -1,0 +1,101 @@
+.btn-base {
+  font-size: $font-size-l;
+  font-weight: $font-bold;
+  padding: rem(16px);
+  position: relative;
+  border-radius: $border-xs;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border: none;
+  overflow: hidden;
+  transition: outline 0.15s ease-in-out;
+  z-index: z(default);
+  &::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: z(negative);
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+  &:active {
+    transform: translateY(rem(4px));
+  }
+}
+
+.c-btn {
+  &-primary {
+    @extend .btn-base;
+    color: map-get($map: $colors, $key: "color-white");
+    background-color: map-get($map: $colors, $key: "color-primary");
+    border-color: map-get($map: $colors, $key: "color-primary");
+    box-shadow: map-get($map: $colors, $key: "color-primary-dark") 0px rem(4px)
+      0px 0px;
+    &::before {
+      background-color: map-get($map: $colors, $key: "color-primary-light");
+    }
+    &.btn {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:active {
+        color: map-get($map: $colors, $key: "color-white");
+        background-color: map-get($map: $colors, $key: "color-primary");
+        border-color: map-get($map: $colors, $key: "color-primary");
+        box-shadow: map-get($map: $colors, $key: "color-primary-dark") 0px
+          rem(4px) 0px 0px !important;
+      }
+      &:active {
+        box-shadow: none !important;
+        &::before {
+          background-color: map-get($map: $colors, $key: "color-primary");
+        }
+      }
+      &:focus-visible {
+        outline: rem(2px) solid map-get($map: $colors, $key: "color-white");
+        outline-offset: rem(6px);
+      }
+    }
+  }
+  &-secondary {
+    @extend .btn-base;
+    color: map-get($map: $colors, $key: "color-white");
+    background-color: map-get($map: $colors, $key: "color-secondary");
+    border-color: map-get($map: $colors, $key: "color-secondary");
+    box-shadow: map-get($map: $colors, $key: "color-secondary-dark") 0px
+      rem(4px) 0px 0px;
+    &::before {
+      background-color: map-get($map: $colors, $key: "color-secondary-light");
+    }
+    &.btn {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:active {
+        color: map-get($map: $colors, $key: "color-white");
+        background-color: map-get($map: $colors, $key: "color-secondary");
+        border-color: map-get($map: $colors, $key: "color-secondary");
+        box-shadow: map-get($map: $colors, $key: "color-secondary-dark") 0px
+          rem(4px) 0px 0px !important;
+      }
+      &:active {
+        box-shadow: none !important;
+        &::before {
+          background-color: map-get($map: $colors, $key: "color-secondary");
+        }
+      }
+      &:focus-visible {
+        outline: rem(2px) solid map-get($map: $colors, $key: "color-white");
+        outline-offset: rem(6px);
+      }
+    }
+  }
+}

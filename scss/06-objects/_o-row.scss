@@ -1,0 +1,7 @@
+.o-row {
+  &-slider {
+    @include respond-to(xl) {
+      margin-right: -25%;
+    }
+  }
+}

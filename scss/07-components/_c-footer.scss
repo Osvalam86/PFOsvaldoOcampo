@@ -1,0 +1,20 @@
+.c-footer {
+  background-color: map-get($map: $colors, $key: "color-secondary");
+  &__copyright {
+    margin-bottom: 0;
+  }
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(40px) rem(16px) rem(24px);
+    row-gap: rem(24px);
+    text-align: center;
+    flex-direction: column;
+    @include respond-to(sm) {
+      flex-direction: row;
+      row-gap: 0;
+      text-align: left;
+    }
+  }
+}

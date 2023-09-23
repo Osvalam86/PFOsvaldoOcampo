@@ -1,0 +1,32 @@
+@mixin title() {
+  @include make-font-style(
+    $font-title,
+    $font-title-size,
+    $font-title-weight,
+    $title-line-height,
+    $title-color,
+    $title-letter-spacing
+  );
+}
+
+@mixin subtitle() {
+  @include make-font-style(
+    $font-subtitle,
+    $font-subtitle-size,
+    $font-subtitle-weight,
+    $subtitle-line-height,
+    $subtitle-color,
+    $subtitle-letter-spacing
+  );
+}
+
+@mixin subtitle-sm() {
+  @include make-font-style(
+    $font-subtitle-sm,
+    $font-subtitle-sm-size,
+    $font-subtitle-sm-weight,
+    $subtitle-sm-line-height,
+    $subtitle-sm-color,
+    $subtitle-sm-letter-spacing
+  );
+}

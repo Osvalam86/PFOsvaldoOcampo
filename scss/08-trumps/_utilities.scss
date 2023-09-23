@@ -1,0 +1,19 @@
+// UTILITIES
+.u {
+  &-btn-custom-w {
+    width: 100%;
+    @include respond-to(md) {
+      width: 50%;
+    }
+  }
+  &-fade-left {
+    animation-duration: 0.7s;
+    animation-delay: 0.3s;
+    animation-name: fade-in-left;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-fill-mode: both;
+  }
+  &-vibrate {
+    animation: vibrate 0.3s linear infinite both;
+  }
+}

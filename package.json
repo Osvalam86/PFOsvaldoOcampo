@@ -1,0 +1,16 @@
+{
+  "name": "pfocampoosvaldo",
+  "version": "1.0.0",
+  "description": "Desarrollo para el curso de Desarrollo Web en CODERHOUSE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+		"sass:watch": "sass --watch scss/main.scss  css/main.css"
+  },
+  "author": "Osvaldo Ocampo",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.68.0"
+  }
+}

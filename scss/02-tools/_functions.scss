@@ -1,0 +1,17 @@
+// Csommon functions
+
+//  Convert PX to REM
+@function rem($size) {
+  $remSize: calc($size / 16px);
+  @return $remSize * 1rem;
+}
+
+// Function that returns the z-index from a key.
+@function z($key) {
+  @if map-has-key($z-index, $key) {
+    @return map-get($z-index, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-index.";
+  @return null;
+}

@@ -1,0 +1,68 @@
+.o-container {
+  &-intro {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24px);
+    align-items: flex-start;
+  }
+  &-bg {
+    display: none;
+    @include respond-to(sm) {
+      display: block;
+      opacity: 0.2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: z(background);
+      position: fixed;
+      top: 0;
+      right: -12%;
+      height: 100%;
+      width: 80%;
+    }
+    @include respond-to(xl) {
+      opacity: 0.7;
+    }
+    &--home {
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+    &--characters,
+    &--comics,
+    &--contact,
+    &--videos {
+      clip-path: polygon(79% 0, 100% 0, 100% 100%, 38% 100%);
+      right: 0;
+    }
+    &--character,
+    &--comic {
+      clip-path: polygon(62% 0, 100% 0%, 100% 100%, 24% 100%);
+      right: 0;
+      @include respond-to(lg) {
+        opacity: 0.7;
+      }
+    }
+    &--error {
+      opacity: 0.75;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  &-gallery {
+    margin-top: rem(48px);
+    display: grid;
+    gap: rem(24px);
+    grid-auto-rows: minmax(auto, rem(480px));
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(100%, rem(240px)), 1fr)
+    );
+  }
+}
+
+// cycle for wallpapers | class modifier
+@each $img in home, characters, comics, contact, videos, character, comic, error
+{
+  .o-container-bg--#{$img} {
+    background-image: url(../assets/images/wallpapers/#{$img}.webp);
+  }
+}

@@ -1,0 +1,13 @@
+// z-index
+$z-index: (
+  bottomless-pit: -9999,
+  body: -200,
+  background: -100,
+  negative: -1,
+  zero: 0,
+  default: 1,
+  slider: 100,
+  overlay: 200,
+  menu: 300,
+  modal: 400,
+);

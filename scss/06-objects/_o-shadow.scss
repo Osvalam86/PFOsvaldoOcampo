@@ -1,0 +1,5 @@
+.o-shadow {
+  &-header {
+    box-shadow: map-get($map: $shadow, $key: "header");
+  }
+}

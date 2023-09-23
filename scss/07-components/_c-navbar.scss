@@ -1,0 +1,85 @@
+.c-navbar {
+  background-color: map-get($map: $colors, $key: "color-dark");
+  &__nav {
+    @include respond-to(lg) {
+      column-gap: 0.5rem;
+    }
+  }
+  &__link {
+    .navbar-expand-lg .navbar-nav & {
+      padding: rem(16px);
+    }
+    color: map-get($map: $colors, $key: "color-white");
+    filter: drop-shadow(2px 4px 6px black);
+    font-weight: $font-bold;
+    font-size: rem(20px);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: all 0.15s;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: map-get($map: $colors, $key: "color-primary");
+      transition: 0.5s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 0;
+      width: 100%;
+      background-color: map-get($map: $colors, $key: "color-primary");
+      transition: 0.4s ease;
+      z-index: -1;
+    }
+    &.active {
+      .c-navbar__item & {
+        opacity: 1;
+        color: map-get($map: $colors, $key: "color-white");
+      }
+    }
+    &:hover {
+      .c-navbar__item & {
+        opacity: 1;
+        color: map-get($map: $colors, $key: "color-white");
+        transition-delay: 0.5s;
+        &::before {
+          width: 100%;
+        }
+        &::after {
+          height: 100%;
+          transition-delay: 0.4s;
+        }
+      }
+    }
+    &:focus,
+    &:active {
+      color: map-get($map: $colors, $key: "color-white");
+    }
+    &:active {
+      &::after {
+        background-color: map-get($map: $colors, $key: "color-primary-dark");
+      }
+    }
+  }
+  &__toggler {
+    &[aria-expanded="true"]
+      .c-hamburger__checkbox:checked
+      + .c-hamburger__vector {
+      transform: rotate(-45deg);
+    }
+    &[aria-expanded="true"]
+      .c-hamburger__checkbox:checked
+      + .c-hamburger__vector
+      .c-hamburger__line--top-bottom {
+      stroke-dasharray: 20 300;
+      stroke-dashoffset: -32.42;
+    }
+  }
+}

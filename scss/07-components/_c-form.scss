@@ -1,0 +1,64 @@
+.c-form {
+  margin-top: rem(32px);
+  @include respond-to(xl) {
+    max-width: 80%;
+  }
+  &__group {
+    position: relative;
+  }
+  &__input,
+  &__textarea {
+    font-family: $font-primary;
+    display: block;
+    width: 100%;
+    border-radius: $border-xs;
+    border: rem(1px) solid map-get($map: $colors, $key: "color-white");
+    padding: rem(18px) rem(20px) rem(8px);
+    font-size: $font-size-m;
+    outline: none;
+    position: relative;
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + label:not(.validated) {
+        color: map-get($map: $colors, $key: "color-secondary");
+        position: absolute;
+        transform: translate(rem(18px), rem(6px));
+        font-weight: $font-bold;
+        top: 0;
+        left: 0;
+        font-size: rem(12px);
+      }
+    }
+  }
+  &__input {
+    height: rem(56px);
+  }
+  &__textarea {
+    resize: none;
+  }
+  &__label {
+    position: absolute;
+    transform: translate(rem(15px), rem(20px));
+    transition: all 0.15s ease;
+    top: -0.313rem;
+    left: 0;
+    color: map-get($map: $colors, $key: "color-gray");
+    font-size: $font-size-m;
+  }
+  &__buttons {
+    display: flex;
+    gap: rem(24px);
+    flex-direction: column;
+    @include respond-to(sm) {
+      flex-direction: row;
+      .btn {
+        width: 50%;
+      }
+    }
+    @include respond-to(md) {
+      .btn {
+        width: 25%;
+      }
+    }
+  }
+}
