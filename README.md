@@ -166,6 +166,12 @@ Es importante saber que el proyecto por ahora no es del todo dinámico, por lo q
 
 Pero no te preocupes, planeamos continuar iterando el proyecto ahora con ayuda de JS y poder hacerlo completamente dinámico, para poder visualizar la información correspondiente a cada personaje y cómic, así como las funcionalidades correspondientes.
 
+## Links de Spiderverso 🕷️
+
+- [Repositorio](https://github.com/Osvalam86/PFOsvaldoOcampo.git)
+- [GITHUB Pages](https://osvalam86.github.io/PFOsvaldoOcampo/)
+- [SPIDERVERSO - Deploy](https://spiderverso.vercel.app/)
+
 ## Para finalizar 🤓
 
 Quiero agradecer a mi tutora Ornella Irigo y a mi profesora Laura Avalle, quienes me acompañaron en este proceso y me brindaron de su valioso tiempo, para poder seguir aprendiendo y crecer profesionalmente.
